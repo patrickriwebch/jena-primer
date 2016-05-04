@@ -25,10 +25,6 @@ public class App
           return;
       }
 
-      if (null == in) {
-        System.out.println("*** InputStream is null!");
-        return;
-      }
       RIOT.init() ;
 
       Model model = ModelFactory.createDefaultModel(); // creates an in-memory Jena Model
