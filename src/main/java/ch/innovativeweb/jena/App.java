@@ -9,16 +9,13 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.riot.RIOT;
 
 /**
- * Hello world!
- * java -cp /Users/patrickr/Documents/java/jena-primer/target/jena-primer-1.0-SNAPSHOT.jar ch.innovativeweb.jena.App
  *
  */
 public class App
 {
     public static void main( String[] args )
     {
-      //File file = new File("/Users/patrickr/Documents/jira/ICMS-2351-Ontologie-Gemeinde-Metadaten/erelocation-example.ttl");
-      File file = new File("/Users/patrickr/Downloads/gont.ttl");
+      File file = new File(args[0]);
       InputStream in = null;
 
       try {
@@ -27,7 +24,6 @@ public class App
           e.printStackTrace();
           return;
       }
-      //InputStream in = App.class.getResourceAsStream("/Users/patrickr/Downloads/gont.ttl");
 
       if (null == in) {
         System.out.println("*** InputStream is null!");
